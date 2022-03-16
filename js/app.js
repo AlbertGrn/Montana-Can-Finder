@@ -1,12 +1,5 @@
 const root = document.documentElement;
-const background = document.getElementById("background");
-const header = document.getElementById("main-header");
-const headerLink = document.getElementById("main-header-link");
-const box = document.getElementById("box");
-const inputBox = document.getElementById("input-box");
 const hexCodeInput = document.getElementById("input-field");
-const colorText = document.getElementsByClassName("color-text");
-const resultText = document.getElementsByClassName("result-text");
 const canName = document.getElementById("can-name");
 const canHex = document.getElementById("can-hex");
 
@@ -104,10 +97,6 @@ montanaHexs.set("008132", "Boston");
 montanaHexs.set("025A27", "Celtic");
 montanaHexs.set("003613", "Banknote");
 montanaHexs.set("003C1A", "TAG Green");
-
-
-
-
 montanaHexs.set("28C842", "Hippie");
 montanaHexs.set("29B419", "Mescaline");
 montanaHexs.set("25900C", "Woodstock");
@@ -325,8 +314,8 @@ hexCodeInput.onclick = function() {
 hexCodeInput.oninput = function() {
     if(hexCodeInput.value.length == 6) {
         //var hex = getValidEntryHex(hexCodeInput);
-        box.style.background = "#" + hexCodeInput.value;
-        background.style.background = "#" + main(hexCodeInput.value)[1];
+        root.style.setProperty('--color-box', "#" + hexCodeInput.value);
+        root.style.setProperty('--color-background', "#" + main(hexCodeInput.value)[1]);
         canHex.innerText = main(hexCodeInput.value)[1];
         canName.innerText = main(hexCodeInput.value)[0];
         checkLAndSetHeaderColor(hexCodeInput.value);

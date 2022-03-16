@@ -2,11 +2,13 @@
     --color1: #000; /*#000 or #fff*/
     --color1-accent: #444; /*#444 or #BBB*/
     --color2: #fff; /*#fff or #000*/
+    --color-background: #888;
+    --color-box: #aaa;
 }
 
 #background {
     font-family: Avenir, Tahoma, sans-serif;
-    background: #888888;
+    background: var(--color-background);
     transition: ease 1s;
 }
 
@@ -34,16 +36,13 @@
 }
 
 #main-header-link:hover {
-    /*change color
-    #444 if header black,
-    #BBB if header white*/
     color: var(--color1-accent);
     cursor: cell;
 }
 
 
 #box {
-    background: #aaa;
+    background: var(--color-box);
     margin: 10% auto;
     width: 25rem;
     height: 10rem;
