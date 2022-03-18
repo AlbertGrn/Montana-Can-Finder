@@ -2,11 +2,13 @@
     --color1: #000;
     --color1-accent: #444;
     --color2: #fff;
+    --color-background: #888;
+    --color-box: #aaa;
 }
 
 #background {
     font-family: Avenir, Tahoma, sans-serif;
-    background: #888888;
+    background: var(--color-background);
     transition: ease 1s;
 }
 
@@ -40,7 +42,7 @@
 
 
 #box {
-    background: #aaa;
+    background: var(--color-box);
     margin: 10% auto;
     width: 25rem;
     height: 10rem;
