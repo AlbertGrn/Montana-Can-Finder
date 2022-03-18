@@ -126,7 +126,7 @@
 }
 
 
-@media (orientation: portrait) or (max-width: 600px) {
+@media (orientation: portrait) {
 
     #main-header-link {
         color: var(--color1-accent);
