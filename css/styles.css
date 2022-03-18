@@ -1,14 +1,12 @@
 :root {
-    --color1: #000; /*#000 or #fff*/
-    --color1-accent: #444; /*#444 or #BBB*/
-    --color2: #fff; /*#fff or #000*/
-    --color-background: #888;
-    --color-box: #aaa;
+    --color1: #000;
+    --color1-accent: #444;
+    --color2: #fff;
 }
 
 #background {
     font-family: Avenir, Tahoma, sans-serif;
-    background: var(--color-background);
+    background: #888888;
     transition: ease 1s;
 }
 
@@ -42,7 +40,7 @@
 
 
 #box {
-    background: var(--color-box);
+    background: #aaa;
     margin: 10% auto;
     width: 25rem;
     height: 10rem;
@@ -54,7 +52,6 @@
 
 #box:hover {
     cursor: cell;
-    /*change box shadow color*/
     box-shadow: 0px 0px 0px 3px var(--color1);
 }
 
@@ -126,4 +123,37 @@
 
 #can-name {
     margin: 25px 0;
+}
+
+
+@media (orientation: portrait) {
+
+    #main-header-link {
+        color: var(--color1-accent);
+    }
+
+    #box {
+        width: 90%;
+        height: 12rem;
+        font-size: 1.75rem;
+    }
+
+    #box:hover {
+        box-shadow: none;
+    }
+
+    #input-box {
+        width: 90%;
+        height: 50px;
+    }
+
+    #input-field {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .color-text {
+        visibility: hidden;
+    }
+
 }
