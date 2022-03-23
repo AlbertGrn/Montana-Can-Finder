@@ -185,22 +185,6 @@ montanaHexs.set("00549D", "Power Blue");
 montanaHexs.set("67B028", "Power Green");
 }
 
-/*function checkEntryHex(hex) {
-    if(/^[a-f\dA-F]{6}$/.test(hex)) {
-        return true;
-    } else {
-        return false;
-    }
-}
-
-function getValidEntryHex(hex) {
-    var hex = getEntryHex();
-    while(!checkEntryHex(hex)) {
-        hex = getEntryHex();
-    }
-    return hex;
-}*/
-
 function computeDistance(hex1, hex2) {
     var rgb1 = hexToRgb(hex1);
     var rgb2 = hexToRgb(hex2);
@@ -313,7 +297,6 @@ hexCodeInput.onclick = function() {
 
 hexCodeInput.oninput = function() {
     if(hexCodeInput.value.length == 6) {
-        //var hex = getValidEntryHex(hexCodeInput);
         root.style.setProperty('--color-box', "#" + hexCodeInput.value);
         root.style.setProperty('--color-background', "#" + main(hexCodeInput.value)[1]);
         canHex.innerText = main(hexCodeInput.value)[1];
